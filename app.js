@@ -8,12 +8,18 @@ const app = express();
 
 const PORT = process.env.PORT ?? 3000;
 
-app.get('/', (req, res) => {
-  const home = React.createElement(Home);
-  const html = ReactDOMServer.renderToStaticMarkup(home);
-  res.write('<!doctype html>');
-  res.end(html);
-});
+// app.get('/', (req, res) => {
+//   const home = React.createElement(Home);
+//   const html = ReactDOMServer.renderToStaticMarkup(home);
+//   res.write('<!DOCTYPE html>');
+//   res.end(html);
+// });
+// app.get('/home', (req, res) => {
+//   const home = React.createElement(Home);
+//   const html = ReactDOMServer.renderToStaticMarkup(home);
+//   res.write('<!DOCTYPE html>');
+//   res.end(html);
+// });
 
 app.listen(PORT, () => {
   console.log('Вологодский ОМОН работает на', PORT);

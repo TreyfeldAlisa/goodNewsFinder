@@ -3,19 +3,25 @@ const Layout = require('./Layout');
 
 module.exports = function Home() {
   return (
-    <Layout title="Login">
+    <Layout>
       <h1>Впервые тут?</h1>
+      <form name="reg">
+        <label>
+          {' '}
+          <a href="/registr">Регистрируйся</a>
+        </label>
+
+      </form>
       <form name="auth">
+        <label>
+          {' '}
+          <a href="/auth">Авторизируйся</a>
 
-        <label htmlFor="">Регистрируйся</label>
-        <button type="text">Рега</button>
-      </form>
-      <form name="login">
+        </label>
 
-        <label htmlFor="inputpassword">Авторизируйся</label>
-        <button type="text">Автор</button>
+        {/* <button type="submit">Автор</button> */}
+
       </form>
-      <div className="errorMessage" />
     </Layout>
   );
 };
