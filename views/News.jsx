@@ -1,5 +1,6 @@
 const React = require('react');
 const Layout = require('./Layout');
+
 const Navbar = require('./NavBar');
 
 module.exports = function News({ novosti = [] }) {

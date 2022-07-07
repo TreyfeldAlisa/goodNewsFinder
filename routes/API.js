@@ -5,7 +5,6 @@ const ReactDOMServer = require('react-dom/server');
 const React = require('react');
 
 const News = require('../views/News');
-const NavBar = require('../views/NavBar');
 
 apiRouter.get('/', async (req, res) => {
   try {
@@ -20,8 +19,6 @@ apiRouter.get('/', async (req, res) => {
 
 apiRouter.post('/', async (req, res) => {
   const { search, filter } = req.body;
-  console.log('🚀 ~  ~ filter', filter);
-  console.log('🚀 ~ ~ search', search);
   try {
     const news = await axios.get(
       encodeURI(
