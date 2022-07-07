@@ -1,10 +1,14 @@
 const express = require('express');
 const logger = require('morgan');
+
+const path = require('path');
+
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 const cookieParser = require('cookie-parser');
 const ReactSsr = require('../middleware/reactSsr');
-const path = require('path');
+
+const isAuth = require('../middleware/isAuth');
 
 const sessionConfig = {
   store: new FileStore(),
@@ -24,6 +28,9 @@ const config = (app) => {
   app.use(express.json());
   app.use(cookieParser());
   app.use(session(sessionConfig));
+
+  app.use(isAuth);
+
   app.use(logger('dev'));
   app.use(ReactSsr);
 };
