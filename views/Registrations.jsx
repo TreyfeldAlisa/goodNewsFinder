@@ -5,6 +5,7 @@ const Layout = require('./Layout');
 module.exports = function Reg() {
   return (
     <Layout>
+
       <NavBar />
       <form
         name="registration"
