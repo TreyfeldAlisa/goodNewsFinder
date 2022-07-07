@@ -7,17 +7,16 @@ const config = require('./config/config');
 const PORT = process.env.PORT ?? 3000;
 
 // импортировать роутеры
-const authRouter = require('./routes/auth');
+const apiRouter = require('./routes/API');
+
 
 const app = express();
 
 config(app);
 
 // подключить роутеры
-app.use('/', authRouter);
-app.use('/reg', authRouter);
-app.use('/login', authRouter);
-app.use('/logout', authRouter);
+
+app.use('/news', apiRouter);
 
 app.listen(PORT, () => {
   console.log('Вологодский ОМОН работает на', PORT);

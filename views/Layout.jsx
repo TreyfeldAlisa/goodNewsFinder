@@ -1,4 +1,5 @@
 const React = require('react');
+
 const Navbar = require('./Navbar');
 
 module.exports = function Layout({ children, user }) {
@@ -17,6 +18,7 @@ module.exports = function Layout({ children, user }) {
         <Navbar user={user} />
         {children}
       </body>
+
     </html>
   );
 };
