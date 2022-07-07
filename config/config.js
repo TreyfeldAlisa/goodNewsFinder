@@ -32,7 +32,7 @@ const config = (app) => {
   app.use(isAuth);
 
   app.use(logger('dev'));
-  app.use(ReactSsr);
+  // app.use(ReactSsr);
 };
 
 module.exports = config;

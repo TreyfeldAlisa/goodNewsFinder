@@ -8,7 +8,6 @@ module.exports = function NavBar() {
         <a className="navbar-brand" href="#">
           Главная
         </a>
-        
         <button
           className="navbar-toggler"
           type="button"

@@ -5,15 +5,6 @@ const Home = require('../views/Home');
 const Login = require('../views/Login');
 const Registrations = require('../views/Registrations');
 
-authRouter
-  .get('/', (req, res) => {
-    res.renderComponent(Home);
-  });
-
-authRouter.get('/reg', (req, res) => {
-  res.renderComponent(Registrations);
-});
-
 authRouter.post('/reg', async (req, res) => {
   try {
     const { login, pass, email } = req.body;
