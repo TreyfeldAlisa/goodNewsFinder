@@ -5,7 +5,7 @@ const NavBar = require('./NavBar');
 module.exports = function Main() {
   return (
     <Layout>
-      <NavBar></NavBar>
+      <NavBar/>
       
     </Layout>
     

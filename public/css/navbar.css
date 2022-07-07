@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.d-flex {
+  display: flex !important;
+  gap: 20px;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.apiNews {
+  margin: 0px 1500px;
+}
