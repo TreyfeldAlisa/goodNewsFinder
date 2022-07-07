@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 module.exports = function Reg() {
   return (
     <Layout>
-      <form name="registration" className="text-c center" method="POST" action="/reg">
+      <form name="registration" className="text-c center" method="POST">
         <label htmlFor="login">
           Введите логин
           {' '}
