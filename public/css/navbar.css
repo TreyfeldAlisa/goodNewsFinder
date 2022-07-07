@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.d-flex {
+  display: flex !important;
+  gap: 20px;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.apiNews {
+  margin: 0px 1500px;
+}
+
+.linkNews {
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-text {
+  max-height: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-data {
+  max-height: 30px;
+}
