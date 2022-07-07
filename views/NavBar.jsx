@@ -1,5 +1,4 @@
 const React = require('react');
-const Layout = require('./Layout');
 
 module.exports = function NavBar() {
   return (
@@ -18,7 +17,7 @@ module.exports = function NavBar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/news">
               Good News
             </a>
 
