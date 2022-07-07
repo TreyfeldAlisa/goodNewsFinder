@@ -17,3 +17,24 @@
 .apiNews {
   margin: 0px 1500px;
 }
+
+.linkNews {
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-text {
+  max-height: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-data {
+  max-height: 30px;
+}

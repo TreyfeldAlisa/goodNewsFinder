@@ -43,13 +43,9 @@ module.exports = function News({ novosti = [] }) {
                 <div className="card-body">
                   <h5 className="card-title">{novost.title}</h5>
                   <p className="card-text">{novost.description}</p>
-                  <p className="card-text">{novost.publishedAt}</p>
-                  <a
-                    href={novost.url}
-                    className="btn btn-primary"
-                    target="_blank"
-                  >
-                    Читать
+                  <p className="card-text card-data">{novost.publishedAt}</p>
+                  <a href={novost.url} target="_blank" className="linkNews">
+                    Читать источник
                   </a>
                 </div>
               </div>
