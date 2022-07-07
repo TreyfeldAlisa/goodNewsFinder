@@ -1,0 +1,12 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 5em;
+}
+body {
+    height: 50em;
+}
+.d-grid {
+    display: grid!important;
+    justify-content: center;
+}
