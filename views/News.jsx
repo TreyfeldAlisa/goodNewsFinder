@@ -63,16 +63,17 @@ module.exports = function News({ novosti = [], user, words=[] }) {
                       timezone: 'UTC',
                     })}
                   </p>
-
-                  <a href={novost.url} target="_blank" className="linkNews" rel="noreferrer">
-
+                  <a href={novost.url} target="_blank" className="linkNews">
                     Читать источник
                   </a>
                 </div>
               </div>
             ))
           ) : (
-            <h1>Новостей нет</h1>
+            <img
+              src="https://1ps.ru/files/blog/2021/instruction-google-adv/5-gugl_sledit_za_toboj.jpg"
+              alt="google"
+            />
           )}
         </div>
       </div>

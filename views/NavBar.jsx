@@ -20,9 +20,11 @@ module.exports = function NavBar({ user }) {
             <a className="navbar-brand" href="/">
               Home
             </a>
-            <a className="navbar-brand" href="/news">
-              Good News
-            </a>
+            {user && (
+              <a className="navbar-brand" href="/news">
+                Good News
+              </a>
+            )}
 
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 apiNews">
               {!user ? (
@@ -40,7 +42,7 @@ module.exports = function NavBar({ user }) {
                     <a className="nav-link" href="/auth/log">
                       Авторизация
                     </a>
-                  </li>{' '}
+                  </li>
                 </>
               ) : (
                 <>
