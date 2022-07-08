@@ -16,11 +16,9 @@ module.exports = function Layout({ children }) {
         />
         <link rel="stylesheet" href="/css/navbar.css" />
         <link rel="stylesheet" href="/css/home.css" />
-<<<<<<< HEAD
+        <link rel="stylesheet" href="/css/regLog.css" />
         <script defer src="/js/auth.js" />
         <script defer src="/js/log.js" />
-=======
->>>>>>> dev
         <script
           src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
           integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
@@ -33,7 +31,7 @@ module.exports = function Layout({ children }) {
         />
         <script src="/js/applications.js" defer />
         <script src="/js/buttonsRegLogRedirect.js" defer />
-        <title>Document</title>
+        <title>Good News</title>
       </head>
       <body>{children}</body>
     </html>

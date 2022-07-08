@@ -4,29 +4,56 @@ const Layout = require('./Layout');
 
 module.exports = function Reg() {
   return (
-    <Layout>
+    <Layout >
       <NavBar />
+      
       <form
         name="registration"
         className="text-c center formReg"
         method="POST"
         action="/auth/reg"
       >
-        <label htmlFor="login">
-          Введите логин <input required name="login" type="text" />
-        </label>
-        <label htmlFor="email">
-          Введите e-mail <input required name="email" type="email" />
-        </label>
-        <label htmlFor="password">
-          Введите пароль
-          <input required minLength={8} name="password" type="password" />
-        </label>
-        <button className="btn btn-register" type="submit">
+        <div className="mb-3">
+          <label for="exampleInputEmail1" className="form-label">
+            Login
+          </label>
+          <input
+            required
+            name="login"
+            type="text"
+            placeholder="Введите логин"
+            className="form-control"
+          />
+        </div>
+        <div className="mb-3">
+          <label for="exampleInputEmail1" className="form-label">
+            Email
+          </label>
+          <input
+            required
+            name="email"
+            type="email"
+            placeholder="Введите почту"
+            className="form-control"
+          />
+        </div>
+        <div className="mb-3">
+          <label for="exampleInputPassword1" className="form-label">
+            Password
+          </label>
+          <input
+            required
+            name="password"
+            type="password"
+            placeholder="Введите пароль"
+            className="password form-control"
+          />
+        </div>
+        <button type="submit" className="btn btn-primary btn-register btn-2">
           Зарегистрироваться
         </button>
       </form>
-      <div className="errorMessage" />
+      <div className="errorDiv" />
     </Layout>
   );
 };

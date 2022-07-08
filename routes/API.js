@@ -40,7 +40,6 @@ apiRouter.post('/', async (req, res) => {
       )
     );
     const user = res.locals.user;
-    console.log('🚀 ~ file: API.js ~ line 42 ~ apiRouter.post ~ user', user);
 
     if (filter) {
       const filterNews = news.data.articles.filter(
