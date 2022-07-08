@@ -16,6 +16,9 @@ module.exports = function Layout({ children }) {
         />
         <link rel="stylesheet" href="/css/navbar.css" />
         <link rel="stylesheet" href="/css/home.css" />
+
+        <link rel="stylesheet" href="/css/regLog.css" />
+
         <script defer src="/js/auth.js" />
         <script defer src="/js/log.js" />
         <script
@@ -30,7 +33,7 @@ module.exports = function Layout({ children }) {
         />
         <script src="/js/applications.js" defer />
         <script src="/js/buttonsRegLogRedirect.js" defer />
-        <title>Document</title>
+        <title>Good News</title>
       </head>
       <body>{children}</body>
     </html>
