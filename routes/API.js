@@ -10,6 +10,7 @@ const News = require('../views/News');
 
 apiRouter.get('/', async (req, res) => {
   try {
+
     const { user } = res.locals;
     const words = await Word.findAll({
       raw: true,
@@ -21,6 +22,7 @@ apiRouter.get('/', async (req, res) => {
     });
     console.log(words);
     const newsT = React.createElement(News, { user: user || null, words });
+    
     const html = ReactDOMServer.renderToStaticMarkup(newsT);
     res.write('<!DOCTYPE html>');
     res.end(html);
@@ -48,8 +50,9 @@ apiRouter.post('/', async (req, res) => {
         `https://newsapi.org/v2/everything?q=${search}&language=ru&apiKey=c01b68ba03054f62a9ffe381cb93d6c5`,
       ),
     );
+
     const { user } = res.locals;
-    // console.log('🚀 ~ file: API.js ~ line 42 ~ apiRouter.post ~ user', user);
+
 
     if (filter) {
       const filterNews = news.data.articles.filter(
@@ -59,7 +62,9 @@ apiRouter.post('/', async (req, res) => {
 
       const newsT = React.createElement(News, {
         novosti: filterNews,
-        user: user || null,
+
+        user: user ? user : null,
+
       });
       const html = ReactDOMServer.renderToStaticMarkup(newsT);
       res.write('<!DOCTYPE html>');
@@ -67,7 +72,9 @@ apiRouter.post('/', async (req, res) => {
     }
     const newsT = React.createElement(News, {
       novosti: news.data.articles,
-      user: user || null,
+
+      user: user ? user : null,
+
     });
     const html = ReactDOMServer.renderToStaticMarkup(newsT);
     res.write('<!DOCTYPE html>');

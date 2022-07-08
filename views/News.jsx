@@ -2,8 +2,8 @@ const React = require('react');
 const Navbar = require('./NavBar');
 const Layout = require('./Layout');
 
+
 module.exports = function News({ novosti = [], user, words }) {
-  // console.log("🚀 ~ file: News.jsx ~ line 6 ~ News ~ user", user)
   return (
     <Layout>
       <Navbar user={user} />
@@ -55,7 +55,9 @@ module.exports = function News({ novosti = [], user, words }) {
                       timezone: 'UTC',
                     })}
                   </p>
-                  <a href={novost.url} target="_blank" className="linkNews" rel="noreferrer">
+
+                  <a href={novost.url} target="_blank" className="linkNews">
+
                     Читать источник
                   </a>
                 </div>
