@@ -2,10 +2,11 @@ const React = require('react');
 const Navbar = require('./NavBar');
 const Layout = require('./Layout');
 
-module.exports = function News({ novosti = [] }) {
+module.exports = function News({ novosti = [], user }) {
+  console.log("🚀 ~ file: News.jsx ~ line 6 ~ News ~ user", user)
   return (
     <Layout>
-      <Navbar />
+      <Navbar user={user} />
       <div style={{ margin: '0 auto' }}>
         <form className="d-flex" action="/news" method="POST">
           <input
@@ -43,7 +44,14 @@ module.exports = function News({ novosti = [] }) {
                 <div className="card-body">
                   <h5 className="card-title">{novost.title}</h5>
                   <p className="card-text">{novost.description}</p>
-                  <p className="card-text card-data">{novost.publishedAt}</p>
+                  <p className="card-text card-data">
+                    {new Date(novost.publishedAt).toLocaleString('ru', {
+                      year: 'numeric',
+                      month: 'numeric',
+                      day: 'numeric',
+                      timezone: 'UTC',
+                    })}
+                  </p>
                   <a href={novost.url} target="_blank" className="linkNews">
                     Читать источник
                   </a>

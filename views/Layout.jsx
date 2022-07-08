@@ -5,7 +5,7 @@ module.exports = function Layout({ children }) {
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -15,6 +15,8 @@ module.exports = function Layout({ children }) {
         ></link>
         <link rel="stylesheet" href="/css/navbar.css" />
         <link rel="stylesheet" href="/css/home.css" />
+        <script defer src="/js/auth.js" />
+        <script defer src="/js/log.js" />
         <script
           src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
           integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"

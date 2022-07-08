@@ -8,9 +8,9 @@ module.exports = function Login() {
       <NavBar />
       <form
         name="login"
-        className="text-c center"
+        className="text-c center formLog"
         method="POST"
-        action="/login"
+        action="/auth/log"
       >
         <label htmlFor="email">email</label>
         <br />
