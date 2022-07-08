@@ -2,7 +2,7 @@ const React = require('react');
 const Navbar = require('./NavBar');
 const Layout = require('./Layout');
 
-module.exports = function News({ novosti = [], user, words }) {
+module.exports = function News({ novosti = [], user, words=[] }) {
   return (
     <Layout>
       <Navbar user={user} />
@@ -27,7 +27,18 @@ module.exports = function News({ novosti = [], user, words }) {
             Найти
           </button>
         </form>
-        <div>{/* <p>{words.map((el) => `${el.word} `)}</p> */}</div>
+        <div className='PWdiv'>
+          {words.map((el) => (
+            <p
+              key={`${el.word}`}
+              className="PW"
+            >
+              {' '}
+              {el.word}
+
+            </p>
+          ))}
+        </div>
         <div className="container">
           {novosti.length ? (
             novosti.map((novost) => (
