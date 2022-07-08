@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser');
 const ReactSsr = require('../middleware/reactSsr');
 
 const isAuth = require('../middleware/isAuth');
+const getUser = require('../middleware/getUser');
 
 const sessionConfig = {
   store: new FileStore(),
@@ -28,8 +29,9 @@ const config = (app) => {
   app.use(cookieParser());
   app.use(session(sessionConfig));
   app.use(logger('dev'));
-//   app.use(ReactSsr);
+  //   app.use(ReactSsr);
   app.use(isAuth);
+  app.use(getUser);
   app.use(logger('dev'));
 };
 
