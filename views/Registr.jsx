@@ -6,7 +6,6 @@ module.exports = function Reg() {
   return (
     <Layout >
       <NavBar />
-      
       <form
         name="registration"
         className="text-c center formReg"
