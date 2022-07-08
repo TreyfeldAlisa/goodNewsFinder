@@ -21,7 +21,6 @@ apiRouter.get('/', async (req, res) => {
     });
     console.log(words);
     const newsT = React.createElement(News, { user: user || null, words });
-    
     const html = ReactDOMServer.renderToStaticMarkup(newsT);
     res.write('<!DOCTYPE html>');
     res.end(html);
@@ -51,7 +50,14 @@ apiRouter.post('/', async (req, res) => {
     );
 
     const { user } = res.locals;
+    const words = await Word.findAll({
+      raw: true,
+      order: [
+        ['count', 'DESC'],
+      ],
+      limit: 5,
 
+    });
 
     if (filter) {
       const filterNews = news.data.articles.filter(
@@ -62,7 +68,8 @@ apiRouter.post('/', async (req, res) => {
       const newsT = React.createElement(News, {
         novosti: filterNews,
 
-        user: user ? user : null,
+        user: user || null,
+        words,
 
       });
       const html = ReactDOMServer.renderToStaticMarkup(newsT);
@@ -72,7 +79,8 @@ apiRouter.post('/', async (req, res) => {
     const newsT = React.createElement(News, {
       novosti: news.data.articles,
 
-      user: user ? user : null,
+      user: user || null,
+      words,
 
     });
     const html = ReactDOMServer.renderToStaticMarkup(newsT);
