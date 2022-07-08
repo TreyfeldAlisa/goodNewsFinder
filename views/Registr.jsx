@@ -6,13 +6,13 @@ module.exports = function Reg() {
   return (
     <Layout >
       <NavBar />
-      
       <form
         name="registration"
         className="text-c center formReg"
         method="POST"
         action="/auth/reg"
       >
+
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
             Login
