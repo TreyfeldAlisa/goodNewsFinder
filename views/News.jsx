@@ -2,8 +2,8 @@ const React = require('react');
 const Navbar = require('./NavBar');
 const Layout = require('./Layout');
 
-module.exports = function News({ novosti = [], user }) {
-  console.log("🚀 ~ file: News.jsx ~ line 6 ~ News ~ user", user)
+module.exports = function News({ novosti = [], user, words }) {
+  // console.log("🚀 ~ file: News.jsx ~ line 6 ~ News ~ user", user)
   return (
     <Layout>
       <Navbar user={user} />
@@ -28,11 +28,14 @@ module.exports = function News({ novosti = [], user }) {
             Найти
           </button>
         </form>
+        <div>
+          <p>{words.map((el) => `${el.word} `)}</p>
+        </div>
         <div className="container">
           {novosti.length ? (
             novosti.map((novost) => (
               <div
-                key={novost.title + '1'}
+                key={`${novost.title}1`}
                 className="card"
                 style={{ width: '18rem' }}
               >
@@ -52,7 +55,7 @@ module.exports = function News({ novosti = [], user }) {
                       timezone: 'UTC',
                     })}
                   </p>
-                  <a href={novost.url} target="_blank" className="linkNews">
+                  <a href={novost.url} target="_blank" className="linkNews" rel="noreferrer">
                     Читать источник
                   </a>
                 </div>
