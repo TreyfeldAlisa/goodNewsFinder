@@ -2,7 +2,6 @@ const React = require('react');
 const Navbar = require('./NavBar');
 const Layout = require('./Layout');
 
-
 module.exports = function News({ novosti = [], user, words }) {
   return (
     <Layout>
@@ -28,9 +27,7 @@ module.exports = function News({ novosti = [], user, words }) {
             Найти
           </button>
         </form>
-        <div>
-          <p>{words.map((el) => `${el.word} `)}</p>
-        </div>
+        <div>{/* <p>{words.map((el) => `${el.word} `)}</p> */}</div>
         <div className="container">
           {novosti.length ? (
             novosti.map((novost) => (
@@ -55,16 +52,17 @@ module.exports = function News({ novosti = [], user, words }) {
                       timezone: 'UTC',
                     })}
                   </p>
-
                   <a href={novost.url} target="_blank" className="linkNews">
-
                     Читать источник
                   </a>
                 </div>
               </div>
             ))
           ) : (
-            <h1>Новостей нет</h1>
+            <img
+              src="https://1ps.ru/files/blog/2021/instruction-google-adv/5-gugl_sledit_za_toboj.jpg"
+              alt="google"
+            />
           )}
         </div>
       </div>

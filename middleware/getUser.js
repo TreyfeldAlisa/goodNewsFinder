@@ -1,7 +1,6 @@
 const { User } = require('../db/models');
 
 module.exports = async function getUser(req, res, next) {
-
   const userId = req.session.userId;
 
   if (userId) {
