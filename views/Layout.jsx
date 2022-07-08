@@ -18,6 +18,7 @@ module.exports = function Layout({ children }) {
         <link rel="stylesheet" href="/css/home.css" />
 
         <link rel="stylesheet" href="/css/regLog.css" />
+        <link rel="stylesheet" href="/css/news.css" />
 
         <script defer src="/js/auth.js" />
         <script defer src="/js/log.js" />
