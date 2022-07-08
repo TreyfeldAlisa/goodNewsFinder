@@ -35,7 +35,8 @@ module.exports = function News({ novosti = [], user, words = [] }) {
                 className="PW"
               >
                 {' '}
-                {el.word}
+                
+                #{el.word}
 
               </td>
             ))}
